@@ -132,3 +132,4 @@ clearButton.addEventListener("click", clearHighScores);
 backButton.addEventListener("click", goBack);
 restartButton.addEventListener("click", restartQuiz);
 
+
