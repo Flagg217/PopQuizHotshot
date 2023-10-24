@@ -1,16 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pop Quiz Hotshot</title>
-    <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
     <section id="container">
-        <h1>Beat the High Score!</h1>
-        <h3>Answer the following questions within the time limit</h3>
-        <button id="start-button"
+      <h1>Beat the High Score!</h1>
+      <h3>Answer the following questions within the time limit</h3>
+      <button id="start-button">Begin Quiz</button>
     </section>
-</body>
+    <section id="start-screen">
+      <header>
+        <section id="title">
+          <h2>Beat the High Score!</h2>
+        </section>
+      </header>
+      </section>
+      <section>
+        <section id="question-screen">
+          <section id="question">
+            <h3>Question</h3>
+          </section>
+          <section id="answer">
+            <button class="submit-button">Answer 1</button>
+            <button class="submit-button">Answer 2</button>
+            <button class="submit-button">Answer 3</button>
+            <button class="submit-button">Answer 4</button>
+          </section>
+          <footer>
+            <section id="questionCounter"></section>
+            <section id="buttons">
+              <button id="restart-button">Restart</button>
+              <button id="clear-button">Clear</button>
+            </section>
+          </footer>
+        </section>
+      </section>
+      <section id="high-score-screen">
+        <form id="end-screen">
+          <h3>Quiz Complete!</h3>
+          <section id="score">
+            <h4>Your final score is <span id="final-score"></span></h4>
+          </section>
+          <section id="initials">
+            <label for="initials">Enter Initials:</label>
+            <input
+              type="text"
+              id="initials"
+              name="initials"
+              placeholder="Enter Initials"
+            />
+          </section>
+          <button id="submit-button">Submit</button>
+        </form>
+
+        <form id="high-score-list">
+          <h3>High Scores</h3>
+          <section id="high-scores">
+            <ol id="high-score-list">
+              <li>Initials - Score</li>
+            </ol>
+          </section>
+          <button id="clear-button">Clear High Scores</button>
+          <button id="restart-button">Restart Quiz</button>
+        </form>
+
+        <script src="assets/javascript/questions.js"></script>
+        <script src="assets/javascript/script.js"></script>
+  </body>
 </html>
