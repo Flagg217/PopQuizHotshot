@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+::selection {
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  margin-right: 10px;
+}
