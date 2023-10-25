@@ -43,34 +43,30 @@ button:active {
   background-color: #000;
 }
 
-#startQuiz {
+#start-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#submitScore,
-#goBack,
-#clearHighScores,
-#showHighScores,
-#restartQuiz,
-#end {
-  display: none;
-}
-
-#high-score-list,
-#start-button,
 #submit-button,
-#high-score-button,
-#clear-button,
-#back-button,
-#restart-button {
+#goBack,
+#clear-scores,
+#restart,
+#end {
+  flex: none;
+  margin-right: 15px;
+}
+
+#score-list,
+#buttons {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
-#high-score-list {
+#score-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,25 +90,25 @@ h3 {
   padding: 3%;
 }
 
-#answer,
+#choice-list,
 h4 {
   font-size: 125%;
   margin-left: 10px;
 }
 
-#answer {
+#choice-list {
   padding: 20px;
 }
 
-#start-screen,
-#end-screen,
-#high-score-screen {
+#content-area,
+#the-end,
+#high-scores {
   display: none;
 }
 
-#end-screen,
-#high-score-screen,
-#start-screen,
+#the-end,
+#high-scores,
+#content-area,
 #container {
   width: 80%;
   margin: 25%;
@@ -121,7 +117,7 @@ h4 {
   flex: 1 0 auto;
 }
 
-#high-score {
+#final-score {
   display: flex;
   justify-content: center;
   flex: 1 0 auto;
@@ -130,7 +126,15 @@ h4 {
   padding: 3%;
 }
 
-#question {
+#initials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+  margin: 0 auto;
+}
+
+#current-question {
   padding-bottom: 20px;
 }
 
