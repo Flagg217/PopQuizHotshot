@@ -20,7 +20,7 @@ var scoreArray = JSON.parse(localStorage.getItem("score")) || [];
 let timeValue = 60;
 let questionCount = 0;
 let questionNumber = 1;
-let timerInterval;
+let timeInterval;
 
 document.getElementById("submit-button").addEventListener("click", function (event) {
     event.preventDefault();
@@ -41,4 +41,40 @@ document.getElementById("submit-button").addEventListener("click", function (eve
     scoreList.innerHTML = scoreString;
 });
 
+function nextQuestion() {
+    questionCount++;
+    if (questionCount >= questions.length) {
+        continue();
+        clearInterval(timeInterval);
+    } else {
+        displayQuestion();
+}
+}
 
+function displayQuestion() {
+    currentQuestion.textContent = questions[questionCount].question;
+
+    while (choiceList.firstChild) {
+        choiceList.removeChild(choiceList.firstChild);
+    }
+
+    for (let i = 0; i < questions[questionCount].options.length; i ++) {
+        var newBtn = document.createElement("button");
+        newBtn.textContent = questions[questionCount].options[i];
+
+        newBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            var userChoice = questions[questionCount].userChoice;
+
+            if (event.target.textContent !== userChoice) {
+                timeValue -= 10;
+                if (timeValue <= 0) {
+                    clearInterval(timeInterval);
+                    continue();
+                }
+            } else {
+                score += 10;
+            }
+
+            
+    }
