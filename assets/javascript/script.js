@@ -31,4 +31,14 @@ document.getElementById("submit-button").addEventListener("click", function (eve
     clearScores.style.display = "block";
 
     var scores = JSON.parse(localStorage.getItem("score")) || [];
-    
+    var initials = initials.value;
+
+    var scoreString = "";
+    for (var i = 0; i < scores.length; i++) {
+        scoreString += "Initials: " + initials.value + " - Score: " + scores[i] + "<br>";
+    }
+
+    scoreList.innerHTML = scoreString;
+});
+
+
