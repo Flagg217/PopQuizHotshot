@@ -15,6 +15,20 @@ var restart = document.getElementById("restart");
 var currentQuestion = document.getElementById("current-question");
 var finalScore = document.getElementById("final-score");
 var score = 0;
-var scoreArray = JSON.parse(localStorage.getItem("scoreArray")) || [];
+var scoreArray = JSON.parse(localStorage.getItem("score")) || [];
 
+let timeValue = 60;
+let questionCount = 0;
+let questionNumber = 1;
+let timerInterval;
 
+document.getElementById("submit-button").addEventListener("click", function (event) {
+    event.preventDefault();
+    theEnd.style.display = "none";
+    highScores.style.display = "block";
+
+    goBack.style.display = "block";
+    clearScores.style.display = "block";
+
+    var scores = JSON.parse(localStorage.getItem("score")) || [];
+    
