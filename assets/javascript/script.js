@@ -6,7 +6,7 @@ var timerEl = document.getElementById("timer");
 var choiceList = document.getElementById("choice-list");
 var theEnd = document.getElementById("the-end");
 var initials = document.getElementById("initials");
-var submitButton = document.getElementById("submit-button");
+var submit = document.getElementById("submit");
 var highScores = document.getElementById("high-scores");
 var scoreList = document.getElementById("score-list");
 var goBack = document.getElementById("go-back");
@@ -21,25 +21,23 @@ let timeValue = 60;
 let questionCount = 0;
 let questionNumber = 1;
 let timeInterval;
+let widthValue = 0;
 
-document.getElementById("submit-button").addEventListener("click", function (event) {
+var initialsValue;
+
+document.getElementById("submit").addEventListener("click", function() {
     event.preventDefault();
     theEnd.style.display = "none";
     highScores.style.display = "block";
 
-    goBack.style.display = "block";
-    clearScores.style.display = "block";
-
-    var scores = JSON.parse(localStorage.getItem("score")) || [];
-    var initials = initials.value;
-
+    initialsValue = initials.value;
     var scoreString = "";
-    for (var i = 0; i < scores.length; i++) {
-        scoreString += "Initials: " + initials.value + " - Score: " + scores[i] + "<br>";
-    }
+   
+    for (var i = 0; i < scoreArray.length; i++) {
+        scoreString += "Initials: " + initialsValue + " - Score: " + score[i] + "<br>";}
 
     scoreList.innerHTML = scoreString;
-});
+    });
 
 function nextQuestion() {
     questionCount++;
