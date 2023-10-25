@@ -54,5 +54,5 @@ This game is licensed under the MIT License.
 
 ## Links:
 
-- [GitHub Repository]()
-- [Deployed Application]()
+- [GitHub Repository](https://github.com/Flagg217/PopQuizHotshot.git)
+- [Deployed Application](https://flagg217.github.io/PopQuizHotshot/)
