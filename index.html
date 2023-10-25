@@ -7,56 +7,63 @@
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
-   <section id="container">
-    <h1>Pop Quiz Hotshot</h1>
-    <h3>Answer the questions if you can, but if you mess up you lose 10 seconds!</h3>
-    <button id="start-button">Start</button>
-   </section>
+    <section id="container">
+      <h1>Pop Quiz Hotshot</h1>
+      <h3>
+        Answer the questions if you can, but if you mess up you lose 10 seconds!
+      </h3>
+      <button id="start-button">Start</button>
+    </section>
 
-   <section id="content-area">
-    <header>
-      <section id="title"><h2>Pop Quiz Hotshot</h2></section>
-      <section id="time-box">
-        <h4 id="time-remaining">Time remaining</h4>
-        <h4 id="timer">60</h4>    
-      </section>
-    </header>
-
-    <section>
-      <section id="question">
-        <h1 id="current-question"></h1>
-        <section id="choice-list"></section>
-      </section>
-
-      <footer>
-        <section id="allQuestions"></section>
-        <section id="buttons">
-          <button id="restart">Too bad! Wanna try again?</button>
-          <button id="end">End Quiz</button>
+    <section id="content-area">
+      <header>
+        <section id="title"><h2>Pop Quiz Hotshot</h2></section>
+        <section id="time-box">
+          <h4 id="time-remaining">Time remaining</h4>
+          <h4 id="timer">60</h4>
         </section>
-      </footer>
-    </section>
-   </section>
+      </header>
 
-   <section id="score-box"></section>
-   <form id="the-end">
-    <h2>Game Over</h2>
-    <p id="final-score">Your final score is ___.</p>
-    <p id="final-score">Enter your Initials:</p>
-    <input type="text" id="initials" name="initials" placeholder="Your initials">
-    <button id="submit">Submit</button>
-   </form>
+      <section>
+        <section id="question">
+          <h1 id="current-question"></h1>
+          <section id="choice-list"></section>
+        </section>
 
-   <form id="high-scores">
-    <h2>High Scores</h2>
-    <p id="score-list" type="text"></p>
-    <section id="buttons">
-      <button id="go-back">Go back</button>
-      <button id="clear-scores">Clear all high scores</button>
+        <footer>
+          <section id="allQuestions"></section>
+          <section id="buttons">
+            <button id="restart">Too bad! Wanna try again?</button>
+            <button id="end">End Quiz</button>
+          </section>
+        </footer>
+      </section>
     </section>
+
+    <section id="score-box"></section>
+    <form id="the-end">
+      <h2>Game Over</h2>
+      <p id="final-score">Your final score is ___.</p>
+      <p id="final-score">Enter your Initials:</p>
+      <input
+        type="text"
+        id="initials"
+        name="initials"
+        placeholder="Your initials"
+      />
+      <button id="submit">Submit</button>
     </form>
 
-        <script src="assets/javascript/questions.js"></script>
-        <script src="assets/javascript/script.js"></script>
+    <form id="high-scores">
+      <h2>High Scores</h2>
+      <p id="score-list" type="text"></p>
+      <section id="buttons">
+        <button id="go-back">Go back</button>
+        <button id="clear-scores">Clear all high scores</button>
+      </section>
+    </form>
+
+    <script src="assets/javascript/questions.js"></script>
+    <script src="assets/javascript/script.js"></script>
   </body>
 </html>
