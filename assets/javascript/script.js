@@ -44,7 +44,7 @@ document.getElementById("submit-button").addEventListener("click", function (eve
 function nextQuestion() {
     questionCount++;
     if (questionCount >= questions.length) {
-        continue();
+        continueOn();
         clearInterval(timeInterval);
     } else {
         displayQuestion();
@@ -70,11 +70,56 @@ function displayQuestion() {
                 timeValue -= 10;
                 if (timeValue <= 0) {
                     clearInterval(timeInterval);
-                    continue();
+                    continueOn();
                 }
             } else {
                 score += 10;
             }
+            nextQuestion();
+    });
+    choiceList.appendChild(newBtn);
+}
+}
 
-            
-    }
+function continueOn() {
+    contentArea.style.display = "none";
+    theEnd.style.display = "block";
+    finalScore.textContent = "Your final score is " + score;
+
+    finalScore = [];
+
+    scoreArray.push(score);
+    localStorage.setItem("score", JSON.stringify(scoreArray));
+}
+
+document.getElementById("start-button").addEventListener("click", function (event) {
+    container.style.display = "none";
+    contentArea.style.display = "block";
+
+    timeInterval = setInterval(function () {
+        timeValue -= 1;
+
+        if (timeValue < 0) {
+            clearInterval(timeInterval);
+            continueOn();
+        }
+
+        timerEl.textContent = timeValue;
+    }, 1000);
+
+    displayQuestion();
+});
+
+restart.addEventListener("click", function (event) {
+    location.reload();
+});
+
+goBack.addEventListener("click", function (event) {
+    highScores.style.display = "none";
+    container.style.display = "block";
+});
+
+clearScores.addEventListener("click", function (event) {
+    localStorage.clear("score");
+    scoreList.innerHTML = "";
+});
